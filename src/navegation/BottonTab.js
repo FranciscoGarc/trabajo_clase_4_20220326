@@ -29,23 +29,7 @@ export default function BottomTab() {
         ),
       }}
     />
-    <Tab.Screen
-      name="PokemonAxios"
-      component={PokemonAxios}
-      options={{
-        title: 'Lista Pokemon con Axios',
-        tabBarActiveTintColor: '#cc0000',
-        headerStyle: {
-          backgroundColor: '#cc0000',
-          borderBottomRightRadius: 35,
-          borderBottomLeftRadius: 35,
-        },
-        headerTintColor: '#fff',
-        tabBarIcon: ({ color }) => (
-          <Ionicons name="list" color={color} size={24} />
-        ),
-      }}
-    />
+
     <Tab.Screen
       name="PokemonList"
       component={PokemonList}

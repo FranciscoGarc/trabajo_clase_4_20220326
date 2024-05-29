@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Image, StyleSheet, Dimensions, TextInput, ActivityIndicator } from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet, Dimensions, ActivityIndicator } from 'react-native';
 import axios from 'axios';
 import FormularioPokemon from '../components/FormularioPokemon';
 
@@ -8,7 +8,7 @@ const numColumns = 3;
 
 export default function PokemonAxios() {
   const [pokemon, setPokemon] = useState([]);
-  const [nPokemon, setNPokemon]=useState(0); //La api comenzará mostrando solamente 25 pokemones
+  const [nPokemon, setNPokemon] = useState(0); // La API comenzará mostrando solamente 25 pokemones
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function PokemonAxios() {
       console.log("Hubo un error listando los pokemones", error);
       setLoading(false);
     }
-  }
+  };
 
   const renderItem = ({ item }) => {
     return (
@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
   },
-  number:{
-    fontWeight:'bold'
+  number: {
+    fontWeight: 'bold',
   },
   loading: {
     marginTop: 20,
